@@ -12,7 +12,7 @@ docstring, so a new script is not finished until it is listed here.
 **Blender helpers (`blender_*.py`, `hero_blender.py`) are meant for agents as much as people.** Each
 docstring has a `Run (live|headless|internal): ...` line: *live* drives the user's open Blender through the
 BlenderMCP add-on on port 9876, *headless* starts its own background Blender, *internal* is part of another
-helper. An agent connected to AssetFurnace's MCP (`./lab mcp`) gets the same list from its `blender_helpers`
+helper. An agent connected to SadSha Image3D's MCP (`./lab mcp`) gets the same list from its `blender_helpers`
 tool; a test fails if a helper has no Run line.
 
 Most tools print their real documentation with `--help`; the docstring at the top of

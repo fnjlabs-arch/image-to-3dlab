@@ -69,7 +69,7 @@ def build_payload(pr: dict, action: str = "opened") -> dict | None:
     stamp = pr.get("merged_at")
     if stamp:
         embed["timestamp"] = stamp
-    return {"username": "AssetFurnace", "embeds": [embed], "allowed_mentions": {"parse": []}}
+    return {"username": "SadSha Image3D", "embeds": [embed], "allowed_mentions": {"parse": []}}
 
 
 def main(argv: list[str] | None = None) -> int:

@@ -167,5 +167,5 @@ def test_the_paint_stages_record_keeps_who_made_it(tmp_path, monkeypatch):
     xiong.run_paint(tmp_path / "mesh.obj", tmp_path / "in.png", output, 0, 512, 15, 4096, 0.0)
     record = json.loads(output.with_suffix(".provenance.json").read_text())
     assert record["license"]["name"] == "Paint terms"
-    assert record["made_with"]["name"] == "AssetFurnace"
+    assert record["made_with"]["name"] == "SadSha Image3D"
     assert record["output"]["path"] == str(output)

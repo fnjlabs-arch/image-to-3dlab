@@ -603,7 +603,7 @@ def test_sf3d_finalize_moves_output_into_place(tmp_path):
 
     api._sf3d_finalize(job)
 
-    assert read_glb(job.output_path.read_bytes())[0]["asset"]["generator"] == f"AssetFurnace {__version__}"
+    assert read_glb(job.output_path.read_bytes())[0]["asset"]["generator"] == f"SadSha Image3D {__version__}"
     assert job.manifest_path.is_file()
     assert json.loads(job.manifest_path.read_text())["model"]["backend"] == "sf3d"
 

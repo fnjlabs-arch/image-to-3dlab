@@ -467,7 +467,7 @@ def test_a_finished_turn_swaps_in_the_new_split_and_lods(tmp_path, monkeypatch):
                        monkeypatch)
     assert job.status == "done"
     read_glb((directory / "split" / "chest.glb").read_bytes())
-    assert read_glb((directory / "finished" / "chest" / "chest_LOD0.glb").read_bytes())[0]["asset"]["generator"] == f"AssetFurnace {__version__}"
+    assert read_glb((directory / "finished" / "chest" / "chest_LOD0.glb").read_bytes())[0]["asset"]["generator"] == f"SadSha Image3D {__version__}"
     assert (directory / "finished" / "barrel" / "barrel_LOD0.glb").read_bytes() == b"x" * 100
     assert not (directory / "turn").exists()
     chest = next(p for p in props.describe_run(directory)["props"] if p["name"] == "chest")
@@ -493,7 +493,7 @@ def test_a_prop_called_split_can_be_turned(tmp_path, monkeypatch):
                        monkeypatch)
     assert job.status == "done", job.events[-1]
     read_glb((directory / "split" / "split.glb").read_bytes())
-    assert read_glb((directory / "finished" / "split" / "split_LOD0.glb").read_bytes())[0]["asset"]["generator"] == f"AssetFurnace {__version__}"
+    assert read_glb((directory / "finished" / "split" / "split_LOD0.glb").read_bytes())[0]["asset"]["generator"] == f"SadSha Image3D {__version__}"
     assert json.loads((directory / "settings.json").read_text())["turns"] == {"split": 90.0}
 
 
@@ -539,7 +539,7 @@ def test_a_turn_updates_its_prop_in_the_finish_record(tmp_path, monkeypatch):
     assert chest == entry
     # And they still point at the files once the turn is swapped into the run.
     assert (finished / chest["source"]).resolve() == (directory / "split" / "chest.glb").resolve()
-    assert read_glb((finished / chest["lods"][0]["glb"]).read_bytes())[0]["asset"]["generator"] == f"AssetFurnace {__version__}"
+    assert read_glb((finished / chest["lods"][0]["glb"]).read_bytes())[0]["asset"]["generator"] == f"SadSha Image3D {__version__}"
 
 
 def test_a_turn_that_would_lose_the_web_files_is_refused(tmp_path, monkeypatch):

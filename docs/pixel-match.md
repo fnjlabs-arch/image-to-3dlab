@@ -23,7 +23,7 @@ folds, hood included](images/front-back-pixel-match.jpg)
 
 It is part of **Finish** in the studio, on by default:
 
-- **Pixal3D models made in AssetFurnace**: automatic. Every Pixal3D run saves the cameras it
+- **Pixal3D models made in SadSha Image3D**: automatic. Every Pixal3D run saves the cameras it
   used beside the model (`<run>.svviews/`: the front, plus the back for a Front + back
   run), and Finish finds them by matching the model's content, so there is nothing to
   point at.

@@ -237,7 +237,7 @@ def _run_welcome(expr: str):
 
 
 WELCOME = {
-    "brand": {"name": "AssetFurnace"},
+    "brand": {"name": "SadSha Image3D"},
     "version": "0.3.0",
     "routes": [{"id": "pixal3d", "state": "missing"}, {"id": "qwen-image", "state": "ready"}],
     "news": [{"version": "0.3.0", "sections": {

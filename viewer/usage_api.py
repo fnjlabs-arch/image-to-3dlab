@@ -1,4 +1,4 @@
-"""Anonymous usage counts: how many people use AssetFurnace, how, and how much they make.
+"""Anonymous usage counts: how many people use SadSha Image3D, how, and how much they make.
 
 On unless the person unticks the box on the About page (or sets `I3D_NO_USAGE=1` or
 `DO_NOT_TRACK=1`). Nothing is sent until the studio has shown its one-time notice and the

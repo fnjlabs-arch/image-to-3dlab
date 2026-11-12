@@ -396,7 +396,7 @@ def test_a_successful_run_writes_its_manifest_beside_the_glb(tmp_path, monkeypat
     assert px.main() == 0
     record = __import__("json").loads((tmp_path / "out" / "gnome.provenance.json").read_text())
     assert record["backend"] == "pixal3d"
-    assert record["made_with"]["name"] == "AssetFurnace"
+    assert record["made_with"]["name"] == "SadSha Image3D"
     assert record["output"]["path"] == str(output.resolve())
     # Turned to face front, with its camera, before the record hashes it.
     assert glb_turn.glb_faces_front(output.read_bytes())

@@ -1,4 +1,4 @@
-<h1 align="center">AssetFurnace</h1>
+<h1 align="center">SadSha Image3D</h1>
 
 <p align="center"><sub>by Bingeljell</sub></p>
 
@@ -24,7 +24,7 @@ NVIDIA PC, with the licence of every asset written down.</p>
 
 <p align="center">
   <img src="docs/images/hero-sentence-to-moving-character.webp" width="432"
-       alt="A sentence is typed, then AssetFurnace makes the picture, the 3D model, the skeleton and the moves: an anime martial artist kicking and dancing">
+       alt="A sentence is typed, then SadSha Image3D makes the picture, the 3D model, the skeleton and the moves: an anime martial artist kicking and dancing">
 </p>
 
 ## Try it
@@ -44,7 +44,7 @@ $1 to reserve, locked for 6 months. The app stays free and open source.</p>
 ## News
 
 - **2026-11-10 · 0.5.9** New moves (Sprint, Crouch sneak, Zombie walk, Robot dance and more), feet that stay planted, and smoother loops.
-- **2026-11-08 · 0.5.8** Switch between an asset's models in the viewer, every 3D file says it was made with AssetFurnace, and the one-line installer works again.
+- **2026-11-08 · 0.5.8** Switch between an asset's models in the viewer, every 3D file says it was made with SadSha Image3D, and the one-line installer works again.
 - **2026-11-03 · 0.5.7** 3D engines work again on installs from before 0.5.5, the lighter background remover replaces the old one, and long steps no longer show as stalled.
 - **2026-11-02 · 0.5.6** FLUX.2 klein Light: the same pictures in about 5 GB of memory instead of 9, suggested on machines with 16 GB or less.
 - **2026-11-02 · 0.5.5** Cutting a picture out now takes less than half the memory, and nothing downloads model weights without asking.
@@ -57,13 +57,13 @@ $1 to reserve, locked for 6 months. The app stays free and open source.</p>
 
 [Everything that changed](CHANGELOG.md)
 
-<p align="center"><sub>Formerly <i>Image to 3D Lab</i>. Same repo, new name.</sub></p>
+<p align="center"><sub>Formerly <i>Image to 3D Lab</i>, now <i>SadSha Image3D</i>. Same repo, new name.</sub></p>
 
 ## What it does
 
 ![Three source images above the textured 3D models generated from them: a photoreal warrior bust, a stylised garden gnome, and a multi-object shoe-house diorama](docs/images/one-image-in-textured-model-out.jpg)
 
-Type a sentence, drop a picture, or bring your own model. AssetFurnace makes the picture,
+Type a sentence, drop a picture, or bring your own model. SadSha Image3D makes the picture,
 builds the 3D model, cleans it up for games, adds a skeleton and animates it. Nothing is
 uploaded anywhere, there are no credits, and you can try as many times as you like.
 
@@ -230,12 +230,12 @@ severe colour drift on flat/vector-style illustrations; prefer photographs or so
 
 ## Use it from your agent
 
-Claude Code, Codex, Kimi and other agents can drive AssetFurnace through **MCP** (the
+Claude Code, Codex, Kimi and other agents can drive SadSha Image3D through **MCP** (the
 standard way agents plug in tools): make pictures, 3D models and animated characters, check
 on a run, look at the result, try another setting, and open it in the studio for you.
 Everything still runs on your machine.
 
-1. Install AssetFurnace (above). Or ask your agent: *"Install AssetFurnace from
+1. Install SadSha Image3D (above). Or ask your agent: *"Install SadSha Image3D from
    assetfurnace.com and connect it to yourself."* It shows you what it will do first.
 2. Connect it. For Claude Code:
    ```bash
@@ -484,7 +484,7 @@ Full credits and per-backend detail: [`docs/info_and_credits.md`](docs/info_and_
 
 ## Usage counts
 
-We're keen to understand how many people are using AssetFurnace - all data shared is anonymous
+We're keen to understand how many people are using SadSha Image3D - all data shared is anonymous
 and you're free to stop sharing any time you want.
 We need a sense of how many people use the app, for what and how: it helps us pick which
 features and fixes come first, and lets us brag a little about the community's love.
@@ -493,12 +493,12 @@ Once a day the studio sends a random id (made on your copy, not tied to you or y
 the version, the kind of computer, and how many pictures, models and other jobs were made,
 from the studio or by an agent. Never pictures, prompts or file names. The About page shows
 the exact message. Untick the box there to stop and forget the id, or set `I3D_NO_USAGE=1`
-(or `DO_NOT_TRACK=1`). An agent using AssetFurnace asks you once and can pass on your
+(or `DO_NOT_TRACK=1`). An agent using SadSha Image3D asks you once and can pass on your
 yes, but only you can turn sharing on or off. Full details: [privacy policy](https://assetfurnace.com/privacy#usage-counts).
 
 ## The studio's News button
 
-The studio's **News** button shows short notes from us: a new version, AssetFurnace Cloud, a known
+The studio's **News** button shows short notes from us: a new version, SadSha Image3D Cloud, a known
 problem and its fix. It looks at [assetfurnace.com/notices.json](https://assetfurnace.com/notices.json)
 at most once a day, sending nothing about you, and never pops up over your work. Turn it off with
 `I3D_NO_NOTICES=1`. Agents see unread news in the MCP's `status`.

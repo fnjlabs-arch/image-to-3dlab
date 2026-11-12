@@ -1,5 +1,5 @@
 [project]
-name = "image-to-3dlab"
+name = "sadsha-image3d"
 version = "0.5.8"
 requires-python = ">=3.11,<3.12"
 dependencies = [

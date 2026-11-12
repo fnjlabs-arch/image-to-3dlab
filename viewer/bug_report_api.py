@@ -92,7 +92,7 @@ def details(output: Path, *, home: str | None = None, machine: str | None = None
             include_prompt: bool = False, chain: str | None = None, step: str | None = None) -> str:
     """Everything the studio adds to a report, as plain text the person can read and edit."""
     home = str(Path.home()) if home is None else home
-    lines = [f"AssetFurnace {version or image_to_3dlab.__version__} · {machine or machine_summary()}"]
+    lines = [f"SadSha Image3D {version or image_to_3dlab.__version__} · {machine or machine_summary()}"]
     failure = find_failure(output, chain, step)
     if failure:
         lines.append(f"Step: {LABELS.get(failure.get('step'), failure.get('step'))} · {failure.get('time', '')}")

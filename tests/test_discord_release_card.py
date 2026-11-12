@@ -7,7 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import discord_release_card as card
 
 URL = "https://github.com/Bingeljell/image-to-3dlab/releases/tag/v0.4.3"
-BODY = """# AssetFurnace 0.4.3
+BODY = """# SadSha Image3D 0.4.3
 
 Thanks to @MylesLandais and @dlm21.
 
@@ -24,7 +24,7 @@ curl -fsSL https://assetfurnace.com/install.sh | bash
 
 
 def release(**over):
-    base = {"html_url": URL, "tag_name": "v0.4.3", "name": "AssetFurnace 0.4.3",
+    base = {"html_url": URL, "tag_name": "v0.4.3", "name": "SadSha Image3D 0.4.3",
             "body": BODY, "published_at": "2026-10-10T12:00:00Z", "prerelease": False}
     return base | over
 
@@ -32,7 +32,7 @@ def release(**over):
 def test_payload_shape():
     payload = card.build_payload(release())
     embed = payload["embeds"][0]
-    assert embed["title"] == "AssetFurnace 0.4.3"
+    assert embed["title"] == "SadSha Image3D 0.4.3"
     assert embed["url"] == URL
     assert embed["color"] == card.EMBER
     assert embed["image"]["url"].endswith("/Bingeljell/image-to-3dlab/v0.4.3/docs/images/social-preview.jpg")

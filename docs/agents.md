@@ -1,11 +1,11 @@
-# Use AssetFurnace from your agent
+# Use SadSha Image3D from your agent
 
-Claude Code, Codex, Kimi and other agents can drive AssetFurnace through **MCP** (Model
+Claude Code, Codex, Kimi and other agents can drive SadSha Image3D through **MCP** (Model
 Context Protocol, the standard way agents plug in tools). Your agent can make pictures, 3D
 models and animated characters, look at the results, and open them in the studio for you.
 Everything still runs on your own machine.
 
-Works on Mac and Linux; Windows is not tested yet. Install AssetFurnace first
+Works on Mac and Linux; Windows is not tested yet. Install SadSha Image3D first
 ([Install](../README.md#install)). The examples below assume the
 default folder, `~/image-to-3dlab`. Change the path if you installed somewhere else.
 

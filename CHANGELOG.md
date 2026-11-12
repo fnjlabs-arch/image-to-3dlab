@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Rebranded to SadSha Image3D (SadSha fork of AssetFurnace): the studio, docs,
+  CLI/MCP titles and the `made_with` stamp on generated assets now say
+  SadSha Image3D. No behaviour change.
+
 ### Fixed
 - Walks, jogs, sneaks and strafes loop smoothly again: 0.5.9 could drop a frame where they
   repeat, which left a small hitch.

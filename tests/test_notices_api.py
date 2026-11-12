@@ -24,7 +24,7 @@ import notices_api
 
 from image_to_3dlab import mcp_server
 
-CLOUD = {"id": "cloud-founder", "title": "AssetFurnace Cloud is coming", "text": "No big GPU? 20¢ a character.",
+CLOUD = {"id": "cloud-founder", "title": "SadSha Image3D Cloud is coming", "text": "No big GPU? 20¢ a character.",
          "url": "https://assetfurnace.com/cloud", "link_text": "See Cloud"}
 TODAY = "2026-10-27"
 

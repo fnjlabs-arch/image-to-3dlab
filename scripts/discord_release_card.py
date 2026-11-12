@@ -23,7 +23,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-#: AssetFurnace ember orange, as on the landing site.
+#: SadSha Image3D ember orange, as on the landing site.
 EMBER = 0xFD6D14
 #: Discord rejects an embed description longer than 4096 characters.
 DESCRIPTION_LIMIT = 4096
@@ -120,7 +120,7 @@ def build_payload(release: dict) -> dict:
     }
     if release.get("published_at"):
         embed["timestamp"] = release["published_at"]
-    return {"username": "AssetFurnace", "embeds": [embed], "allowed_mentions": {"parse": []}}
+    return {"username": "SadSha Image3D", "embeds": [embed], "allowed_mentions": {"parse": []}}
 
 
 def send(payload: dict, webhook: str) -> None:

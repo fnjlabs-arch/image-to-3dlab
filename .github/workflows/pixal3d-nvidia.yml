@@ -146,6 +146,6 @@ jobs:
           gh release view "$tag" --repo "${{ github.repository }}" >/dev/null 2>&1 ||
             gh release create "$tag" --repo "${{ github.repository }}" --prerelease --latest=false \
               --title "Pixal3D NVIDIA build ($tag)" \
-              --notes "pixal3d.cpp @ $COMMIT with our steps and clean-up dump patches, for NVIDIA cards (20 series to 50 series). Installed by scripts/bootstrap_pixal3d.py; not an AssetFurnace release." ||
+              --notes "pixal3d.cpp @ $COMMIT with our steps and clean-up dump patches, for NVIDIA cards (20 series to 50 series). Installed by scripts/bootstrap_pixal3d.py; not an SadSha Image3D release." ||
             gh release view "$tag" --repo "${{ github.repository }}" >/dev/null
           gh release upload "$tag" "$ASSET" --clobber --repo "${{ github.repository }}"

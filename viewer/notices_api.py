@@ -1,4 +1,4 @@
-"""Notices from us: a new release, AssetFurnace Cloud, a known problem and its fix.
+"""Notices from us: a new release, SadSha Image3D Cloud, a known problem and its fix.
 
 The studio shows them behind a bell in its header and never pops them over someone's work; each
 one stays until it is read. Agents see the unread ones in the MCP's `status`.

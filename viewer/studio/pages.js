@@ -73,7 +73,7 @@ export async function refreshNews(button) {
 export async function openNews(stage, button) {
   const el = sheet(stage, `<div class="sheet-card">
     <div class="sheet-top"><h2>News</h2><button type="button" class="ghost" data-close>Close</button></div>
-    <p class="meta">From the people who make AssetFurnace: new versions, Cloud, known problems and fixes. Checked once a day; nothing about you is sent.</p>
+    <p class="meta">From the people who make SadSha Image3D: new versions, Cloud, known problems and fixes. Checked once a day; nothing about you is sent.</p>
     <div class="notices" aria-live="polite"><p class="meta">Loading…</p></div></div>`);
   const box = el.querySelector('.notices');
   let answer;
@@ -101,7 +101,7 @@ export async function openActivity(stage) {
   try {
     records = (await (await fetch('/api/activity')).json()).history || [];
   } catch {
-    box.innerHTML = '<p class="meta">The history could not be read. Restart AssetFurnace and try again.</p>';
+    box.innerHTML = '<p class="meta">The history could not be read. Restart SadSha Image3D and try again.</p>';
     return;
   }
   if (!records.length) {
@@ -153,8 +153,8 @@ const CREDITS = [
 
 export async function openAbout(stage) {
   const el = sheet(stage, `<div class="sheet-card about">
-    <div class="sheet-top"><h2>About <span>AssetFurnace</span></h2><button type="button" class="ghost" data-close>Close</button></div>
-    <p>Hi, I’m Bingeljell. I love building stuff, specially in and around the vicinity of video games. AssetFurnace is my
+    <div class="sheet-top"><h2>About <span>SadSha Image3D</span></h2><button type="button" class="ghost" data-close>Close</button></div>
+    <p>Hi, I’m Bingeljell. I love building stuff, specially in and around the vicinity of video games. SadSha Image3D is my
       attempt at trying to empower game devs to be able to do more and better.</p>
     <p>This is a young new project and will only survive when people like you use it, critique it, share feedback and most
       of all spread the word. So if you use this and like it, share it with a friend. If you have feedback, write up an issue
@@ -163,9 +163,9 @@ export async function openAbout(stage) {
       <a href="https://x.com/bingeljell" target="_blank" rel="noopener">X</a>. Most of all, we’d love contributions.</p>
     <p>The goal is to enable you to make game-ready 3D characters and props on your own machine: from an idea, a picture or a model, to a rigged,
       moving character you can drop into Godot, Unity, Unreal or Blender. Your pictures, prompts and models never leave this computer.</p>
-    <p class="meta" data-version>AssetFurnace by Bingeljell</p>
-    <!-- ABOUT COPY: the "What AssetFurnace adds" list below is the part to edit -->
-    <h3>What AssetFurnace adds</h3>
+    <p class="meta" data-version>SadSha Image3D by Bingeljell</p>
+    <!-- ABOUT COPY: the "What SadSha Image3D adds" list below is the part to edit -->
+    <h3>What SadSha Image3D adds</h3>
     <ul class="adds">
       <li><b>One flow, start to finish.</b> Idea, picture, 3D model, clean-up, rig and moves, each step handing its result to the next.</li>
       <li><b class="pm">Pixel Match</b> puts your picture's real pixels back on the model, so text, logos and faces stay sharp instead of coming back as garbled lookalikes.</li>
@@ -182,10 +182,10 @@ export async function openAbout(stage) {
       <li><a href="${href}" target="_blank" rel="noopener"><b>${escape(name)}</b></a> <span class="meta">${escape(who)} · ${escape(licence)}</span></li>`).join('')}
     </ul>
     <p class="meta">The full list with every licence: <a href="https://github.com/Bingeljell/image-to-3dlab/blob/main/docs/info_and_credits.md" target="_blank" rel="noopener">credits on GitHub</a>.
-      AssetFurnace's own code is Apache-2.0.</p>
+      SadSha Image3D's own code is Apache-2.0.</p>
     <h3>Usage counts</h3>
     <div data-usage>
-      <p>We're keen to understand how many people are using AssetFurnace - all data shared is anonymous and you're free to stop sharing any time you want.
+      <p>We're keen to understand how many people are using SadSha Image3D - all data shared is anonymous and you're free to stop sharing any time you want.
         We need a sense of how many people use the app, for what and how. It helps us pick which features and fixes come first, and lets us brag a little about the community's love.</p>
       <label><input type="checkbox" data-usage-box> Share anonymous usage counts</label>
       <p class="meta">Once a day it sends a random id, the version, the kind of computer, and how many pictures, models and other jobs
@@ -205,7 +205,7 @@ export async function openAbout(stage) {
   try {
     const update = await (await fetch('/api/update-check')).json();
     const line = el.querySelector('[data-version]');
-    line.textContent = `AssetFurnace by Bingeljell · version ${update.current}`;
+    line.textContent = `SadSha Image3D by Bingeljell · version ${update.current}`;
     if (update.newer && update.url) {
       line.insertAdjacentHTML('beforeend', ` · <a href="${escape(update.url)}" target="_blank" rel="noopener">version ${escape(update.latest)} is out</a>`);
     }
@@ -264,16 +264,16 @@ export const GUIDE = [
   ['Hero face', 'For characters whose face matters. In the Finish step, set Detail to Hero face. The body is finished as usual, then the head is built again from a close, sharper crop of your picture and joined on, so faces get real eyelids instead of goggle eyes. It takes longer than a normal Finish, and needs a model made from a picture. Long hair below the shoulders keeps the body\'s plainer detail. Have a look at the eyes: if a pupil is a dark hole, Fix a spot\'s Fill hole closes it.'],
   ['Fix a spot', 'The brush button in the 3D view, on a finished model. Click to mark spots (size the ring with the slider or [ ]), press Patch to preview, flip Before / After, then Keep (a new version) or Discard. Fill hole cuts out a pocket or dent and patches it smooth: dark pupils, goggle eyes, pits in a beard. Smooth irons out bumps and ridges without cutting (set its strength). Repaint changes paint only, from your picture: scuffs and smears.'],
   ['Open GLB', 'Look at any GLB from your computer, or drop one anywhere on the page. View only: nothing is copied into your Library.'],
-  ['News', 'Short notes from us: a new version, AssetFurnace Cloud, a known problem and its fix. A number shows when there is something new; it never pops up.'],
+  ['News', 'Short notes from us: a new version, SadSha Image3D Cloud, a known problem and its fix. A number shows when there is something new; it never pops up.'],
   ['Activity', 'Everything that has run, finished, stopped or failed, with logs when something breaks.'],
   ['Report a bug', 'Tell us what broke. The studio adds the version, your machine and the error; you read it all, then send it through our site, GitHub or Discord.'],
   ['Setup', 'Install engines and see disk use. Nothing downloads until you say yes, and each download says how big it is first.'],
-  ['About', 'What AssetFurnace is, the open models it builds on, and their licences.'],
+  ['About', 'What SadSha Image3D is, the open models it builds on, and their licences.'],
 ];
 
 export function openGuide(stage) {
   sheet(stage, `<div class="sheet-card guide">
-    <div class="sheet-top"><h2>How to use <span>AssetFurnace</span></h2><button type="button" class="ghost" data-close>Close</button></div>
+    <div class="sheet-top"><h2>How to use <span>SadSha Image3D</span></h2><button type="button" class="ghost" data-close>Close</button></div>
     <p class="meta">New here? The <a href="${FULL_GUIDE}" target="_blank" rel="noopener">step-by-step guide</a> takes you from one picture to a finished, animated character, with pictures.</p>
     <dl>${GUIDE.map(([title, text]) => `<dt>${escape(title)}</dt><dd>${escape(text)}</dd>`).join('')}</dl></div>`);
 }

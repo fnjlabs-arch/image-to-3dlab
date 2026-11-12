@@ -17,8 +17,8 @@ from image_to_3dlab import __version__
 from image_to_3dlab.matte import matte_model
 
 # Who made the file. `made_with` sits beside the licence, never inside it: it says which
-# app produced the asset, and must never read as if AssetFurnace licenses the model.
-MADE_WITH_NAME = "AssetFurnace"
+# app produced the asset, and must never read as if SadSha Image3D licenses the model.
+MADE_WITH_NAME = "SadSha Image3D"
 MADE_WITH_URL = "https://assetfurnace.com"
 
 GLB_MAGIC = 0x46546C67

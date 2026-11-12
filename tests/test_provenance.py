@@ -235,9 +235,9 @@ def test_finalize_output_records_canonical_identity(tmp_path):
     assert record["model"]["identity"] == "stabilityai/stable-fast-3d"
     assert record["output"]["classification"] == profile.classification
     assert "verified" not in record.get("license", {})
-    assert record["made_with"]["name"] == "AssetFurnace"
+    assert record["made_with"]["name"] == "SadSha Image3D"
     assert record["made_with"]["version"] == __version__
-    assert read_glb(destination.read_bytes())[0]["asset"]["generator"] == f"AssetFurnace {__version__}"
+    assert read_glb(destination.read_bytes())[0]["asset"]["generator"] == f"SadSha Image3D {__version__}"
 
 
 def test_finalize_output_marks_unknown_identity_unverified(tmp_path):
@@ -277,7 +277,7 @@ def test_every_record_says_who_made_the_file(tmp_path):
     path = write_provenance(tmp_path / "a.provenance.json", record)
     saved = json.loads(path.read_text())
     assert saved["made_with"] == {
-        "name": "AssetFurnace",
+        "name": "SadSha Image3D",
         "version": __version__,
         "url": "https://assetfurnace.com",
     }
@@ -305,11 +305,11 @@ def test_a_glb_says_it_was_made_with_assetfurnace_and_nothing_else_changes(tmp_p
 
     after, after_bin = read_glb(path.read_bytes())
     expected = json.loads(json.dumps(before))
-    expected["asset"]["generator"] = f"AssetFurnace {__version__}"
+    expected["asset"]["generator"] = f"SadSha Image3D {__version__}"
     assert after == expected, "only generator changes"
     assert after_bin == before_bin, "the binary chunk is untouched"
     set_glb_generator(path)
-    assert read_glb(path.read_bytes())[0]["asset"]["generator"] == f"AssetFurnace {__version__}"
+    assert read_glb(path.read_bytes())[0]["asset"]["generator"] == f"SadSha Image3D {__version__}"
 
 
 def test_a_file_that_is_not_a_glb_is_refused_not_rewritten(tmp_path):
@@ -380,7 +380,7 @@ def test_derived_sidecar_retains_licences_and_hashes(tmp_path, extra):
     sidecar = p.write_derived_sidecar(source, output, operation="finish", component_records=[paint] if extra else [])
     record = json.loads(sidecar.read_text())
     assert record["source_record"] == origin
-    assert record["made_with"]["name"] == "AssetFurnace"
+    assert record["made_with"]["name"] == "SadSha Image3D"
     assert record["output"]["sha256"] == p.sha256_file(output)
     assert record["model"] == origin["model"]
     assert record["components"][0] == origin["components"][0]

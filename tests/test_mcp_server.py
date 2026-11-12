@@ -68,7 +68,7 @@ class FakeHttp:
             "api/chains/r1": {"id": "r1", "status": "done", "done": ["picture"], "made": {"picture": "images/x.png"}},
         }.get(path)
         if path == "api/bug-report":
-            return Response(200, {"details": "AssetFurnace 0.4.5 · macOS", "failure": True, "has_prompt": True})
+            return Response(200, {"details": "SadSha Image3D 0.4.5 · macOS", "failure": True, "has_prompt": True})
         if path == "api/model-info":
             return Response(200, {"file": "finish/k/k_20k.glb", "path": "/out/finish/k/k_20k.glb",
                                   "folder": "/out/finish/k", "stats": {"triangles": 19981}})
@@ -323,7 +323,7 @@ def test_show_in_folder_opens_the_steps_file_on_this_machine(studio):
 def test_report_bug_drafts_the_report_and_never_sends_it(studio):
     out = ms.report_bug(studio, message="Finish crashed", include_prompt=True)
     assert studio.http.last_params == {"prompt": "1"}
-    assert studio.http.posts[-1] == ("api/bug-report", {"message": "Finish crashed", "details": "AssetFurnace 0.4.5 · macOS"})
+    assert studio.http.posts[-1] == ("api/bug-report", {"message": "Finish crashed", "details": "SadSha Image3D 0.4.5 · macOS"})
     assert out["send_here"].startswith("https://assetfurnace.com/report")
     assert "user" in out["tip"].lower() and "send" in out["tip"].lower()
 
